@@ -29,6 +29,7 @@ class QuestionsSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class ReviewSerializer(serializers.ModelSerializer):
+    quiz_title = serializers.StringRelatedField(source='quiz.title')
     class Meta:
         model = models.Review
         fields = '__all__'
