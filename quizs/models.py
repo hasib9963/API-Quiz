@@ -38,7 +38,6 @@ STAR_CHOICES=[
 
 ]
 class Review(models.Model):
-    reviewer = models.ForeignKey(User, on_delete=models.CASCADE)
     quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE, related_name='reviews')
     Name = models.CharField(max_length=50)
     Comments = models.CharField(max_length=200)
